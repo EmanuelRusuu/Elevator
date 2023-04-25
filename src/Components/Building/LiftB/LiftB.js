@@ -8,8 +8,6 @@ export default function LiftB({ elevatorBStorey, setElevatorBStorey }) {
     const isSix = elevatorBStorey === 6;
     const isSeven = elevatorBStorey === 7;
 
-    console.log(elevatorBStorey);
-
     return (
         <div
             className={`lift-container lift-container-a ${

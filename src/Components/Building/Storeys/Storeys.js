@@ -18,32 +18,40 @@ export default function Storeys({
         setCallElevator();
     }
 
-    if (
-        currentStorey === callElevator &&
-        distanceElevatorA <= distanceElevatorB
-    ) {
-        setElevatorAStorey(currentStorey);
-    } else if (
-        currentStorey === callElevator &&
-        distanceElevatorA > distanceElevatorB
-    ) {
-        setElevatorBStorey(currentStorey);
+    function callingElevator() {
+        if (
+            currentStorey === callElevator &&
+            distanceElevatorA <= distanceElevatorB
+        ) {
+            setElevatorAStorey(currentStorey);
+        } else if (
+            currentStorey === callElevator &&
+            distanceElevatorA > distanceElevatorB
+        ) {
+            setElevatorBStorey(currentStorey);
+        }
     }
 
     console.log('call: ' + callElevator);
     console.log('distange A: ' + distanceElevatorA);
     console.log('distance B: ' + distanceElevatorB);
+
     return (
         <div className="storeys-container">
             <div className="storey storey-seven">
                 <div className="buttons-container">
                     <div className="buttons-container">
                         <BiUpArrow
-                            onClick={() => setCallElevator(7)}
+                            onClick={() => {
+                                callingElevator();
+                            }}
                             className="elevator-arrow"
                         ></BiUpArrow>
                         <BiDownArrow
-                            onClick={() => setCallElevator(7)}
+                            onClick={() => {
+                                setCallElevator(7);
+                                callingElevator();
+                            }}
                             className="elevator-arrow"
                         ></BiDownArrow>
                     </div>
@@ -63,11 +71,17 @@ export default function Storeys({
                 <div className="buttons-container">
                     <div className="buttons-container">
                         <BiUpArrow
-                            onClick={() => setCallElevator(6)}
+                            onClick={() => {
+                                setCallElevator(6);
+                                callingElevator();
+                            }}
                             className="elevator-arrow"
                         ></BiUpArrow>
                         <BiDownArrow
-                            onClick={() => setCallElevator(6)}
+                            onClick={() => {
+                                setCallElevator(6);
+                                callingElevator();
+                            }}
                             className="elevator-arrow"
                         ></BiDownArrow>
                     </div>
@@ -87,11 +101,17 @@ export default function Storeys({
                 <div className="buttons-container">
                     <div className="buttons-container">
                         <BiUpArrow
-                            onClick={() => setCallElevator(5)}
+                            onClick={() => {
+                                setCallElevator(5);
+                                callingElevator();
+                            }}
                             className="elevator-arrow"
                         ></BiUpArrow>
                         <BiDownArrow
-                            onClick={() => setCallElevator(5)}
+                            onClick={() => {
+                                setCallElevator(5);
+                                callingElevator();
+                            }}
                             className="elevator-arrow"
                         ></BiDownArrow>
                     </div>
@@ -110,11 +130,17 @@ export default function Storeys({
             <div className="storey storey-four storey-odd">
                 <div className="buttons-container">
                     <BiUpArrow
-                        onClick={() => setCallElevator(4)}
+                        onClick={() => {
+                            setCallElevator(4);
+                            callingElevator();
+                        }}
                         className="elevator-arrow"
                     ></BiUpArrow>
                     <BiDownArrow
-                        onClick={() => setCallElevator(4)}
+                        onClick={() => {
+                            setCallElevator(4);
+                            callingElevator();
+                        }}
                         className="elevator-arrow"
                     ></BiDownArrow>
                 </div>
@@ -133,11 +159,17 @@ export default function Storeys({
                 <div className="buttons-container">
                     <div className="buttons-container">
                         <BiUpArrow
-                            onClick={() => setCallElevator(3)}
+                            onClick={() => {
+                                setCallElevator(3);
+                                callingElevator();
+                            }}
                             className="elevator-arrow"
                         ></BiUpArrow>
                         <BiDownArrow
-                            onClick={() => setCallElevator(3)}
+                            onClick={() => {
+                                setCallElevator(3);
+                                callingElevator();
+                            }}
                             className="elevator-arrow"
                         ></BiDownArrow>
                     </div>
@@ -157,11 +189,17 @@ export default function Storeys({
                 <div className="buttons-container">
                     <div className="buttons-container">
                         <BiUpArrow
-                            onClick={() => setCallElevator(2)}
+                            onClick={() => {
+                                setCallElevator(2);
+                                callingElevator();
+                            }}
                             className="elevator-arrow"
                         ></BiUpArrow>
                         <BiDownArrow
-                            onClick={() => setCallElevator(2)}
+                            onClick={() => {
+                                setCallElevator(2);
+                                callingElevator();
+                            }}
                             className="elevator-arrow"
                         ></BiDownArrow>
                     </div>
@@ -181,11 +219,17 @@ export default function Storeys({
                 <div className="buttons-container">
                     <div className="buttons-container">
                         <BiUpArrow
-                            onClick={() => setCallElevator(1)}
+                            onClick={() => {
+                                setCallElevator(1);
+                                callingElevator();
+                            }}
                             className="elevator-arrow"
                         ></BiUpArrow>
                         <BiDownArrow
-                            onClick={() => setCallElevator(1)}
+                            onClick={() => {
+                                setCallElevator(1);
+                                callingElevator();
+                            }}
                             className="elevator-arrow"
                         ></BiDownArrow>
                     </div>
