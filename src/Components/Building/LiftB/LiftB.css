@@ -1,0 +1,15 @@
+.segment-a-b,
+.segment-d-b,
+.segment-g-b {
+    background-color: rgb(105, 42, 42);
+    width: 75%;
+    height: 5%;
+}
+.segment-b-b,
+.segment-c-b,
+.segment-e-b,
+.segment-f-b {
+    background-color: rgb(105, 42, 42);
+    width: 10%;
+    height: 75%;
+}

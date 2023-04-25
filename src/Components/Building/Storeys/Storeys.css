@@ -1,0 +1,48 @@
+.buttons-container {
+    background-color: gray;
+    height: 3rem;
+    width: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 0.3rem;
+}
+
+.storey {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.storeys-container {
+    width: 70%;
+    height: 100%;
+    background-color: rgb(151, 151, 151);
+}
+
+.storey {
+    width: 100%;
+    height: calc(100% / 7);
+}
+
+.storey-odd {
+    background-color: rgb(163, 163, 163);
+}
+
+.elevator-arrow {
+    cursor: pointer;
+    /* color: rgb(218, 126, 40); */
+}
+
+.storey-door {
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: rgb(117, 115, 115);
+    cursor: pointer;
+}
+
+.door-open {
+    color: black;
+}
