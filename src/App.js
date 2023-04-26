@@ -7,7 +7,7 @@ function App() {
     const [elevatorBStorey, setElevatorBStorey] = useState(7);
     const [currentStorey, setCurrentStorey] = useState(4);
     let [callElevator, setCallElevator] = useState();
-    // const [inLift, setInLift] = useState(false);
+    const [inLift, setInLift] = useState(false);
 
     let distanceElevatorA;
     let distanceElevatorB;
@@ -37,18 +37,45 @@ function App() {
         elevatorIsCalled = 'Call the elevator on your floor!';
     }
 
+    let isInsideLift;
+
+    if (inLift === true) {
+        isInsideLift = ', inside the lift';
+    } else {
+        isInsideLift = ', outside the lift';
+    }
+
+    let isLiftHere;
+
+    if (distanceElevatorA === 0) {
+        isLiftHere = (
+            <p>
+                Arrived: <b>Lift A</b>
+            </p>
+        );
+    } else if (distanceElevatorB === 0) {
+        isLiftHere = (
+            <p>
+                Arrived: <b>Lift B</b>
+            </p>
+        );
+    } else if (distanceElevatorA && distanceElevatorB === 0) {
+        isLiftHere = (
+            <p>
+                Arrived: <b>Both lifts</b>
+            </p>
+        );
+    } else {
+        isLiftHere = 'Arrived:';
+    }
+
     return (
         <div className="App">
             <div className="sky">
-                <div className="lift-names-container">
-                    <div className="lift-names">
-                        <p className="lift-name">Lift A</p>
-                        <p className="lift-name">Lift B</p>
-                    </div>
-                </div>
                 <div className="app-information">
-                    <p>{`You are at floor: ${currentStorey}`}</p>
-                    <p>{`Called the elevator at floor: ${elevatorIsCalled} `}</p>
+                    <p>{`You are at floor: ${currentStorey}${isInsideLift}`}</p>
+                    <p>{`Elevator called at floor: ${elevatorIsCalled}`}</p>
+                    <p>{isLiftHere}</p>
                     <br></br>
                     <p>{`Lift A is at floor: ${elevatorAStorey}`}</p>
                     <p>{`Lift B is at floor: ${elevatorBStorey}`}</p>
@@ -67,6 +94,8 @@ function App() {
                     setCallElevator={setCallElevator}
                     distanceElevatorA={distanceElevatorA}
                     distanceElevatorB={distanceElevatorB}
+                    inLift={inLift}
+                    setInLift={setInLift}
                 />
             </div>
             <div className="road">

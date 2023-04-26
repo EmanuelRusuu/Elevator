@@ -1,5 +1,9 @@
 import './LiftA.css';
-export default function LiftA({ elevatorAStorey, setElevatorAStorey }) {
+export default function LiftA({
+    elevatorAStorey,
+    setElevatorAStorey,
+    setCallElevator,
+}) {
     const isOne = elevatorAStorey === 1;
     const isTwo = elevatorAStorey === 2;
     const isThree = elevatorAStorey === 3;

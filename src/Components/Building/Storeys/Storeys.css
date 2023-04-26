@@ -22,14 +22,22 @@
 
 .enter-lift-button {
     font-size: 1.3rem;
-    color: gray;
+    display: none;
 }
 
 .enter-lift-button-available {
     color: black !important;
+    cursor: pointer;
+    display: block;
+}
+
+.exit-lift {
+    transform: rotateY(180deg) rotateX(180deg);
 }
 
 .storey {
+    width: 100%;
+    height: calc(100% / 7);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -42,21 +50,13 @@
     background-color: rgb(151, 151, 151);
 }
 
-.storey {
-    width: 100%;
-    height: calc(100% / 7);
-}
-
 .storey-odd {
     background-color: rgb(163, 163, 163);
 }
 
-.elevator-arrow {
-    cursor: pointer;
-}
-
 .active-arrow {
     color: rgb(218, 126, 40);
+    cursor: pointer;
 }
 
 .storey-door {
@@ -68,4 +68,22 @@
 
 .door-open {
     color: black;
+}
+
+.can-call-elevator {
+    cursor: pointer;
+}
+
+.storey-door-unavailable {
+    cursor: default !important;
+}
+
+.you {
+    font-size: 2.5rem;
+    color: rgb(109, 109, 109);
+    opacity: 1;
+}
+
+.you-invisible {
+    opacity: 0;
 }
