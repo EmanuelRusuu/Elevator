@@ -1,4 +1,4 @@
-import './LiftA.css';
+import './Lift.css';
 export default function LiftA({
     elevatorAStorey,
     setElevatorAStorey,
@@ -57,7 +57,7 @@ export default function LiftA({
                 }}
                 className="invisible-lift invisible-lift-two"
             ></div>
-            <div className={`lift lift-a`}>
+            <div className="lift">
                 <div className="seven-segment-display">
                     <div className="seven-segment-column">
                         <div

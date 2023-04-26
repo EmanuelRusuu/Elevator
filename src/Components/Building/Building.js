@@ -1,6 +1,6 @@
 import './Building.css';
-import LiftA from './LiftA/LiftA';
-import LiftB from './LiftB/LiftB';
+import LiftA from './Lifts/LiftA';
+import LiftB from './Lifts/LiftB';
 import Storeys from './Storeys/Storeys';
 import FloorIndex from '../../Components/information/floor-index/floor-index';
 import LiftFloorInfo from '../../Components/information/lift-floor-info/lift-floor-info';

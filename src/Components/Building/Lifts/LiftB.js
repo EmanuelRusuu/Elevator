@@ -58,7 +58,7 @@ export default function LiftB({
                 className="invisible-lift invisible-lift-two"
             ></div>
 
-            <div className="lift lift-b">
+            <div className="lift">
                 <div className="seven-segment-display">
                     <div className="seven-segment-column">
                         <div
@@ -114,7 +114,7 @@ export default function LiftB({
                                 className={`segment-display segment-c ${
                                     isOne ? 'segment-active' : ''
                                 } ${isThree ? 'segment-active' : ''} 
-                                ${isFour ? 'segment-active' : ''}${
+                                ${isFour ? 'segment-active' : ''} ${
                                     isFive ? 'segment-active' : ''
                                 } ${isSix ? 'segment-active' : ''} ${
                                     isSeven ? 'segment-active' : ''
