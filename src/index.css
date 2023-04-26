@@ -1,3 +1,22 @@
+:root {
+    --color-black: black;
+    --color-white: white;
+    --color-read-user-manual: rgba(0, 0, 0, 0.2);
+    --color-lift: rgb(52, 52, 105);
+    --color-segments-display: rgb(75, 75, 122);
+    --color-lift-hall: rgb(96, 95, 122);
+    --color-info-p: rgb(153, 153, 179);
+    --color-info-border: rgb(189, 189, 223);
+    --color-person-in-lift: rgb(109, 109, 109);
+    --color-road: rgb(136, 134, 134);
+    --color-building: gray;
+    --color-road-line: rgb(180, 180, 180);
+    --color-user-manual-bg: rgb(154, 189, 201);
+    --color-sky: rgb(203, 237, 248);
+    --color-segment-active: red;
+    --color-segment-display: rgba(105, 42, 42, 0.5);
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',

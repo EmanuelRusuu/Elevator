@@ -1,7 +1,7 @@
 .lift-container {
     height: 100%;
     width: 23%;
-    background-color: rgb(96, 95, 122);
+    background-color: var(--color-lift-hall);
 }
 
 .lift-container-a {
@@ -37,7 +37,7 @@
 }
 
 .lift {
-    background-color: rgb(52, 52, 105);
+    background-color: var(--color-lift);
     width: 100%;
     height: calc(100% / 7);
     display: flex;
@@ -54,63 +54,9 @@
 .lift-name-a p {
     font-size: 2.5rem;
     text-align: center;
-    color: white;
+    color: var(--color-white);
     opacity: 0.5;
     white-space: nowrap;
-}
-
-.seven-segment-display {
-    background-color: rgb(75, 75, 122);
-    width: 40%;
-    height: 100%;
-    padding: 0.5rem;
-}
-
-.seven-segment-column {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.segment-a,
-.segment-d,
-.segment-g {
-    background-color: rgba(105, 42, 42, 0.5);
-    width: 72%;
-    height: 6%;
-}
-.segment-b,
-.segment-c,
-.segment-e,
-.segment-f {
-    background-color: rgba(105, 42, 42, 0.5);
-    width: 9%;
-    height: 77%;
-}
-
-.row1 {
-    width: 100%;
-    height: 50%;
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.row2 {
-    width: 100%;
-    height: 50%;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .lift-buttons-container {
@@ -138,8 +84,62 @@
     grid-column: span 2;
 }
 
+.seven-segment-display {
+    background-color: var(--color-segments-display);
+    width: 40%;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+.seven-segment-column {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.segment-a,
+.segment-d,
+.segment-g {
+    background-color: var(--color-segment-display);
+    width: 72%;
+    height: 6%;
+}
+.segment-b,
+.segment-c,
+.segment-e,
+.segment-f {
+    background-color: var(--color-segment-display);
+    width: 9%;
+    height: 77%;
+}
+
 .segment-active {
-    background-color: red;
+    background-color: var(--color-segment-active);
+}
+
+.row1 {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.row2 {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .invisible-lift {

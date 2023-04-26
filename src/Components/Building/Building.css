@@ -6,7 +6,7 @@
 }
 
 .building-container {
-    background-color: gray;
+    background-color: var(--color-building);
     height: 100%;
     width: 92%;
     display: flex;
@@ -17,7 +17,7 @@
 }
 
 .you-lift {
-    color: rgb(109, 109, 109) !important;
+    color: var(--color-person-in-lift) !important;
     opacity: 1 !important;
 }
 

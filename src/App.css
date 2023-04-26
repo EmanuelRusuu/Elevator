@@ -6,7 +6,7 @@
 .sky {
     height: 90%;
     width: 100%;
-    background-color: rgb(203, 237, 248);
+    background-color: var(--color-sky);
     display: flex;
     justify-content: center;
     align-items: flex-end;

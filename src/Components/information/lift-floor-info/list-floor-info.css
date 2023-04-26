@@ -14,14 +14,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border-top: 2px dotted rgb(189, 189, 223);
+    border-top: 2px dotted var(--color-info-border);
     width: 100%;
 }
 
 .lift-and-floor-info-container .lift-and-floor-info-index p {
     margin-left: 0.5rem;
     height: 100%;
-    color: rgb(153, 153, 179);
+    color: var(--color-info-p);
     font-size: 1rem;
     display: flex;
     justify-content: center;

@@ -13,13 +13,13 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    border-top: 2px dotted rgb(189, 189, 223);
+    border-top: 2px dotted var(--color-info-border);
 }
 
 .index .index-and-men-position p {
     height: 100%;
     width: 50%;
-    color: rgb(153, 153, 179);
+    color: var(--color-info-p);
     font-size: 1.2rem;
     display: flex;
     justify-content: center;

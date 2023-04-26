@@ -36,7 +36,7 @@
 }
 
 .user-manual-invisible {
-    background-color: rgb(154, 189, 201);
+    background-color: var(--color-user-manual-bg);
     width: 20rem;
     height: 20rem;
     position: absolute;
@@ -86,7 +86,7 @@
 }
 
 .user-manual-leading {
-    color: rgba(0, 0, 0, 0.2);
+    color: var(--color-read-user-manual);
     cursor: default;
     user-select: none;
 }
