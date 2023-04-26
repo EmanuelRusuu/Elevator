@@ -1,0 +1,31 @@
+.index {
+    width: 8%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    cursor: default;
+    user-select: none;
+}
+
+.index .index-and-men-position {
+    height: calc(100% / 7);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: 2px dotted rgb(189, 189, 223);
+}
+
+.index .index-and-men-position p {
+    height: 100%;
+    width: 50%;
+    color: rgb(153, 153, 179);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-first {
+    border: 0 !important;
+}

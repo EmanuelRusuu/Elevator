@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Building from './Components/Building/Building';
 import './App.css';
-import Road from './Components/Road';
-import UserManual from './Components/user-manual';
-import AppInfo from './Components/real-time-info';
+import Road from './Components/Road/Road';
+import UserManual from './Components/information/user-manual/user-manual';
+import AppInfo from './Components/information/real-time-info/real-time-info';
 
 function App() {
     const [elevatorAStorey, setElevatorAStorey] = useState(0);
@@ -53,23 +53,23 @@ function App() {
     if (distanceElevatorA === 0) {
         isLiftHere = (
             <p>
-                Arrived: <b>Lift A</b>
+                At your floor: <b>Lift A</b>
             </p>
         );
     } else if (distanceElevatorB === 0) {
         isLiftHere = (
             <p>
-                Arrived: <b>Lift B</b>
+                At your floor: <b>Lift B</b>
             </p>
         );
     } else if (distanceElevatorA && distanceElevatorB === 0) {
         isLiftHere = (
             <p>
-                Arrived: <b>Both lifts</b>
+                At your floor: <b>Both lifts</b>
             </p>
         );
     } else {
-        isLiftHere = 'Arrived:';
+        isLiftHere = 'At your floor:';
     }
 
     return (

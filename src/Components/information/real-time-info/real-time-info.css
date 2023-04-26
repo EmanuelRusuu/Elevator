@@ -1,0 +1,8 @@
+.app-information {
+    position: absolute;
+    margin: 0.5rem;
+    top: 0;
+    left: 0;
+    cursor: default;
+    user-select: none;
+}

@@ -1,11 +1,12 @@
+import './user-manual.css';
 import { useState } from 'react';
-import manIcoon from '../Assets/manicoon.jpg';
-import manIcoon1 from '../Assets/manicoon1.jpg';
-import usermanualfloorandlift from '../Assets/usermanual3.jpg';
-import upanddownarrows from '../Assets/updownarrows.jpg';
-import upanddownarrowsactive from '../Assets/updownarrowsactive.jpg';
-import enter from '../Assets/enter.jpg';
-import exit from '../Assets/exit.jpg';
+import manIcoon from '../../../Assets/manicoon.jpg';
+import manIcoon1 from '../../../Assets/manicoon1.jpg';
+import usermanualfloorandlift from '../../../Assets/usermanual3.jpg';
+import upanddownarrows from '../../../Assets/updownarrows.jpg';
+import upanddownarrowsactive from '../../../Assets/updownarrowsactive.jpg';
+import enter from '../../../Assets/enter.jpg';
+import exit from '../../../Assets/exit.jpg';
 import { AiOutlineQuestionCircle } from 'react-icons/ai';
 
 export default function UserManual() {

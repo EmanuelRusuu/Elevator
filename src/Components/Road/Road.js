@@ -1,3 +1,5 @@
+import './Road.css';
+
 export default function Road() {
     return (
         <div className="road">

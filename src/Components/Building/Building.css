@@ -16,38 +16,6 @@
     gap: 0.2rem;
 }
 
-.index {
-    width: 8%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem 0;
-    cursor: default;
-    user-select: none;
-}
-
-.index .index-and-men-position {
-    height: calc(100% / 7);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border-top: 2px dotted rgb(189, 189, 223);
-}
-
-.index .index-and-men-position p {
-    height: 100%;
-    width: 50%;
-    color: rgb(153, 153, 179);
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.index-first {
-    border: 0 !important;
-}
-
 .you-lift {
     color: rgb(109, 109, 109) !important;
     opacity: 1 !important;
@@ -56,34 +24,4 @@
 .you-invisible-lift {
     font-size: 2.5rem;
     opacity: 0;
-}
-
-.lift-and-floor-info-container {
-    width: 20%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem 0;
-    cursor: default;
-    user-select: none;
-}
-
-.lift-and-floor-info-container .lift-and-floor-info-index {
-    height: calc(100% / 7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    border-top: 2px dotted rgb(189, 189, 223);
-    width: 100%;
-}
-
-.lift-and-floor-info-container .lift-and-floor-info-index p {
-    margin-left: 0.5rem;
-    height: 100%;
-    color: rgb(153, 153, 179);
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

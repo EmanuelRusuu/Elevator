@@ -1,3 +1,4 @@
+import './floor-index.css';
 import { IoManOutline } from 'react-icons/io5';
 
 export default function FloorIndex({ inLift, currentStorey }) {
