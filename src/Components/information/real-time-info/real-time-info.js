@@ -15,8 +15,8 @@ export default function AppInfo({
             <p>{`Elevator called at floor: ${elevatorIsCalled}`}</p>
             <p>{isLiftHere}</p>
             <br></br>
-            <p>{`Lift A is at floor: ${elevatorAStorey}`}</p>
-            <p>{`Lift B is at floor: ${elevatorBStorey}`}</p>
+            <p>{`Lift A is at floor: ${elevatorAStorey + 1}`}</p>
+            <p>{`Lift B is at floor: ${elevatorBStorey + 1}`}</p>
             <br></br>
             <p>{`Lift A is ${distanceElevatorA} floors away`}</p>
             <p>{`Lift B is ${distanceElevatorB} floors away`}</p>
