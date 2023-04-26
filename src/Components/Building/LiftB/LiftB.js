@@ -1,5 +1,13 @@
 import './LiftB.css';
-export default function LiftB({ elevatorBStorey, setElevatorBStorey }) {
+export default function LiftB({
+    elevatorBStorey,
+    setElevatorBStorey,
+    inLift,
+    distanceElevatorA,
+    distanceElevatorB,
+    setCurrentStorey,
+    setCallElevator,
+}) {
     const isOne = elevatorBStorey === 1;
     const isTwo = elevatorBStorey === 2;
     const isThree = elevatorBStorey === 3;
@@ -7,6 +15,16 @@ export default function LiftB({ elevatorBStorey, setElevatorBStorey }) {
     const isFive = elevatorBStorey === 5;
     const isSix = elevatorBStorey === 6;
     const isSeven = elevatorBStorey === 7;
+
+    let isLiftB;
+
+    if (distanceElevatorA === 0) {
+        isLiftB = false;
+    } else if (distanceElevatorB === 0) {
+        isLiftB = true;
+    } else if (distanceElevatorA === 0 && distanceElevatorB === 0) {
+        isLiftB = false;
+    }
 
     return (
         <div
@@ -21,6 +39,10 @@ export default function LiftB({ elevatorBStorey, setElevatorBStorey }) {
             }
             `}
         >
+            <div className="lift-name-b">
+                <p>Lift B</p>
+            </div>
+
             <div
                 style={{
                     display:
@@ -101,45 +123,79 @@ export default function LiftB({ elevatorBStorey, setElevatorBStorey }) {
                         </div>
                     </div>
                 </div>
-                <div className="lift-buttons-container">
+                <div
+                    className={`lift-buttons-container ${
+                        isLiftB === true && inLift === true
+                            ? 'lift-buttons-container-opacity-b'
+                            : ''
+                    }`}
+                >
                     <button
-                        onClick={() => setElevatorBStorey(1)}
+                        onClick={() => {
+                            setElevatorBStorey(1);
+                            setCurrentStorey(1);
+                            setCallElevator(1);
+                        }}
                         className="lift-button lift-button-1"
                     >
                         1
                     </button>
                     <button
-                        onClick={() => setElevatorBStorey(2)}
+                        onClick={() => {
+                            setElevatorBStorey(2);
+                            setCurrentStorey(2);
+                            setCallElevator(2);
+                        }}
                         className="lift-button lift-button-2"
                     >
                         2
                     </button>
                     <button
-                        onClick={() => setElevatorBStorey(3)}
+                        onClick={() => {
+                            setElevatorBStorey(3);
+                            setCurrentStorey(3);
+                            setCallElevator(3);
+                        }}
                         className="lift-button lift-button-3"
                     >
                         3
                     </button>
                     <button
-                        onClick={() => setElevatorBStorey(4)}
+                        onClick={() => {
+                            setElevatorBStorey(4);
+                            setCurrentStorey(4);
+                            setCallElevator(4);
+                        }}
                         className="lift-button lift-button-4"
                     >
                         4
                     </button>
                     <button
-                        onClick={() => setElevatorBStorey(5)}
+                        onClick={() => {
+                            setElevatorBStorey(5);
+                            setCurrentStorey(5);
+                            setCallElevator(5);
+                        }}
                         className="lift-button lift-button-5"
                     >
                         5
                     </button>
                     <button
-                        onClick={() => setElevatorBStorey(6)}
+                        onClick={() => {
+                            setElevatorBStorey(6);
+                            setCurrentStorey(6);
+                            setCallElevator(6);
+                        }}
                         className="lift-button lift-button-6"
                     >
                         6
                     </button>
                     <button
-                        onClick={() => setElevatorBStorey(7)}
+                        onClick={() => {
+                            setElevatorBStorey(7);
+                            setCurrentStorey(7);
+                            setCallElevator(7);
+                        }}
                         className="lift-button lift-button-7"
                     >
                         7

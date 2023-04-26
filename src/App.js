@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import Building from './Components/Building/Building';
 import './App.css';
+import Road from './Components/Road';
+import UserManual from './Components/user-manual';
+import AppInfo from './Components/real-time-info';
 
 function App() {
     const [elevatorAStorey, setElevatorAStorey] = useState(1);
@@ -33,7 +36,7 @@ function App() {
     if (callElevator === currentStorey) {
         elevatorIsCalled = currentStorey;
     } else {
-        callElevator = null;
+        callElevator = 0;
         elevatorIsCalled = 'Call the elevator on your floor!';
     }
 
@@ -72,17 +75,16 @@ function App() {
     return (
         <div className="App">
             <div className="sky">
-                <div className="app-information">
-                    <p>{`You are at floor: ${currentStorey}${isInsideLift}`}</p>
-                    <p>{`Elevator called at floor: ${elevatorIsCalled}`}</p>
-                    <p>{isLiftHere}</p>
-                    <br></br>
-                    <p>{`Lift A is at floor: ${elevatorAStorey}`}</p>
-                    <p>{`Lift B is at floor: ${elevatorBStorey}`}</p>
-                    <br></br>
-                    <p>{`Lift A is ${distanceElevatorA} floors away`}</p>
-                    <p>{`Lift B is ${distanceElevatorB} floors away`}</p>
-                </div>
+                <AppInfo
+                    currentStorey={currentStorey}
+                    isInsideLift={isInsideLift}
+                    elevatorIsCalled={elevatorIsCalled}
+                    isLiftHere={isLiftHere}
+                    elevatorAStorey={elevatorAStorey}
+                    elevatorBStorey={elevatorBStorey}
+                    distanceElevatorA={distanceElevatorA}
+                    distanceElevatorB={distanceElevatorB}
+                />
                 <Building
                     elevatorAStorey={elevatorAStorey}
                     setElevatorAStorey={setElevatorAStorey}
@@ -97,12 +99,9 @@ function App() {
                     inLift={inLift}
                     setInLift={setInLift}
                 />
+                <UserManual />
             </div>
-            <div className="road">
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-            </div>
+            <Road />
         </div>
     );
 }
