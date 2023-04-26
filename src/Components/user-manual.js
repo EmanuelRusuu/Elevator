@@ -13,6 +13,7 @@ export default function UserManual() {
 
     return (
         <div className="user-manual-container">
+            <p className="user-manual-leading">{`Read User Manual First -->`}</p>
             <AiOutlineQuestionCircle
                 onClick={() => setActive((prevState) => !prevState)}
                 className={`user-manual-q`}

@@ -35,24 +35,27 @@
     margin: 0.5rem;
     top: 0;
     left: 0;
+    cursor: default;
+    user-select: none;
 }
 
 .user-manual-container {
-    width: 2rem;
-    height: 2rem;
+    width: 15rem;
+    height: fit-content;
     position: absolute;
     right: 0;
     top: 0;
     margin: 1.5rem;
     border-radius: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: row;
 }
 
 .user-manual-q {
-    height: 100%;
-    width: 100%;
+    height: 2rem;
+    width: 2rem;
     cursor: pointer;
     z-index: 1;
 }
@@ -69,6 +72,8 @@
     height: 80%;
     width: 98%;
     overflow-y: scroll;
+    cursor: default;
+    user-select: none;
 }
 
 .user-manual-invisible {
@@ -119,4 +124,10 @@
 .user-manual-lift-enter-leave {
     width: 1.5rem;
     height: 1.5rem;
+}
+
+.user-manual-leading {
+    color: rgba(0, 0, 0, 0.2);
+    cursor: default;
+    user-select: none;
 }

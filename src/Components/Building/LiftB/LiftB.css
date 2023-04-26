@@ -16,6 +16,8 @@
     position: absolute;
     top: -4rem;
     width: 100%;
+    cursor: default;
+    user-select: none;
 }
 
 .lift-name-b p {

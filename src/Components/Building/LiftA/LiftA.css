@@ -47,6 +47,8 @@
     position: absolute;
     top: -4rem;
     width: 100%;
+    cursor: default;
+    user-select: none;
 }
 
 .lift-name-a p {
@@ -132,7 +134,7 @@
     cursor: pointer;
 }
 
-.lift-button-1 {
+.lift-button-7 {
     grid-column: span 2;
 }
 

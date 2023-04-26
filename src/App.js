@@ -6,9 +6,9 @@ import UserManual from './Components/user-manual';
 import AppInfo from './Components/real-time-info';
 
 function App() {
-    const [elevatorAStorey, setElevatorAStorey] = useState(1);
-    const [elevatorBStorey, setElevatorBStorey] = useState(7);
-    const [currentStorey, setCurrentStorey] = useState(4);
+    const [elevatorAStorey, setElevatorAStorey] = useState(0);
+    const [elevatorBStorey, setElevatorBStorey] = useState(6);
+    const [currentStorey, setCurrentStorey] = useState(3);
     let [callElevator, setCallElevator] = useState();
     const [inLift, setInLift] = useState(false);
 

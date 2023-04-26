@@ -62,68 +62,19 @@ export default function Storeys({
     - door (on click - changes floor)
     - arrows up/down (onclick - calls elevator)
     - enter/exit arrow (onclick - enters/leaves the elevator)
-    - arrows turn orange when elevator has arrived (when elevator is called ln.32(callElevator === currentStorey) -> {setActiveArrows(currentStorey)} ex: floor 7 = activeArrows 7;
-    - enter/exit arrow only appears when the elevator is called and when it arrives, condition: ex:(activeArrows === 7 && currentStorey === 7)
+    - arrows turn orange when elevator has arrived (when elevator is called ln.21(callElevator === currentStorey) -> {setActiveArrows(currentStorey)} ex: floor 6 = activeArrows 6;
+    - enter/exit arrow only appears when the elevator is called and when it arrives, condition: ex:(activeArrows === 6 && currentStorey === 6)
     - it rotates in addition to inLift`s value, if it`s true, arrow leads to the lift and vice-versa
 */
 
     return (
         <div className="storeys-container">
-            {/*----------------------------------------------------------- STOREY 7 ----------------------------------------------------------- */}
+            {/*----------------------------------------------------------- STOREY 6 ----------------------------------------------------------- */}
             <div className="storey storey-seven">
                 <div className="buttons-container">
                     <div
                         onClick={() => {
-                            handleArrowClick(7);
-                        }}
-                        className={`elevator-arrows elevator-arrow ${
-                            activeArrows === 7 ? 'active-arrow' : ' '
-                        } ${canCallElevator === 7 ? 'can-call-elevator' : ''}`}
-                    >
-                        <BiUpArrow />
-                        <BiDownArrow />
-                    </div>
-                    <div className="enter-lift-container">
-                        <AiOutlineEnter
-                            className={`enter-lift-button ${
-                                activeArrows === 7 && currentStorey === 7
-                                    ? 'enter-lift-button-available'
-                                    : ' '
-                            }  ${inLift === true ? 'exit-lift' : ''}`}
-                            onClick={() => setInLift((prevState) => !prevState)}
-                        />
-                    </div>
-                </div>
-                <IoManOutline
-                    className={`you ${
-                        currentStorey !== 7 ? 'you-invisible' : ''
-                    } ${inLift === true ? 'you-invisible' : ''}`}
-                />
-                <div
-                    onClick={
-                        inLift === false
-                            ? () => setCurrentStorey(7)
-                            : () => setCurrentStorey(currentStorey)
-                    }
-                    className={`storey-door ${
-                        inLift === true ? 'storey-door-unavailable' : ' '
-                    }`}
-                >
-                    {currentStorey === 7 && inLift === false ? (
-                        <BsDoorOpen className="door-open"></BsDoorOpen>
-                    ) : (
-                        <BsDoorClosed></BsDoorClosed>
-                    )}
-                </div>
-            </div>
-
-            {/*----------------------------------------------------------- STOREY 6 ----------------------------------------------------------- */}
-            <div className="storey storey-six storey-odd">
-                <div className="buttons-container">
-                    <div
-                        onClick={() => {
                             handleArrowClick(6);
-                            // setActiveArrows(6);
                         }}
                         className={`elevator-arrows elevator-arrow ${
                             activeArrows === 6 ? 'active-arrow' : ' '
@@ -167,7 +118,7 @@ export default function Storeys({
             </div>
 
             {/*----------------------------------------------------------- STOREY 5 ----------------------------------------------------------- */}
-            <div className="storey storey-five">
+            <div className="storey storey-six storey-odd">
                 <div className="buttons-container">
                     <div
                         onClick={() => {
@@ -187,7 +138,7 @@ export default function Storeys({
                                 activeArrows === 5 && currentStorey === 5
                                     ? 'enter-lift-button-available'
                                     : ' '
-                            }   ${inLift === true ? 'exit-lift' : ''}`}
+                            }  ${inLift === true ? 'exit-lift' : ''}`}
                             onClick={() => setInLift((prevState) => !prevState)}
                         />
                     </div>
@@ -216,7 +167,7 @@ export default function Storeys({
             </div>
 
             {/*----------------------------------------------------------- STOREY 4 ----------------------------------------------------------- */}
-            <div className="storey storey-four storey-odd">
+            <div className="storey storey-five">
                 <div className="buttons-container">
                     <div
                         onClick={() => {
@@ -236,7 +187,7 @@ export default function Storeys({
                                 activeArrows === 4 && currentStorey === 4
                                     ? 'enter-lift-button-available'
                                     : ' '
-                            }  ${inLift === true ? 'exit-lift' : ''}`}
+                            }   ${inLift === true ? 'exit-lift' : ''}`}
                             onClick={() => setInLift((prevState) => !prevState)}
                         />
                     </div>
@@ -265,7 +216,7 @@ export default function Storeys({
             </div>
 
             {/*----------------------------------------------------------- STOREY 3 ----------------------------------------------------------- */}
-            <div className="storey storey-three">
+            <div className="storey storey-four storey-odd">
                 <div className="buttons-container">
                     <div
                         onClick={() => {
@@ -285,7 +236,7 @@ export default function Storeys({
                                 activeArrows === 3 && currentStorey === 3
                                     ? 'enter-lift-button-available'
                                     : ' '
-                            }   ${inLift === true ? 'exit-lift' : ''}`}
+                            }  ${inLift === true ? 'exit-lift' : ''}`}
                             onClick={() => setInLift((prevState) => !prevState)}
                         />
                     </div>
@@ -314,7 +265,7 @@ export default function Storeys({
             </div>
 
             {/*----------------------------------------------------------- STOREY 2 ----------------------------------------------------------- */}
-            <div className="storey storey-two storey-odd">
+            <div className="storey storey-three">
                 <div className="buttons-container">
                     <div
                         onClick={() => {
@@ -363,7 +314,7 @@ export default function Storeys({
             </div>
 
             {/*----------------------------------------------------------- STOREY 1 ----------------------------------------------------------- */}
-            <div className="storey storey-one">
+            <div className="storey storey-two storey-odd">
                 <div className="buttons-container">
                     <div
                         onClick={() => {
@@ -404,6 +355,55 @@ export default function Storeys({
                     }`}
                 >
                     {currentStorey === 1 && inLift === false ? (
+                        <BsDoorOpen className="door-open"></BsDoorOpen>
+                    ) : (
+                        <BsDoorClosed></BsDoorClosed>
+                    )}
+                </div>
+            </div>
+
+            {/*----------------------------------------------------------- STOREY 0 ----------------------------------------------------------- */}
+            <div className="storey storey-one">
+                <div className="buttons-container">
+                    <div
+                        onClick={() => {
+                            handleArrowClick(0);
+                            // setActiveArrows(0);
+                        }}
+                        className={`elevator-arrows elevator-arrow ${
+                            activeArrows === 0 ? 'active-arrow' : ' '
+                        } ${canCallElevator === 0 ? 'can-call-elevator' : ''}`}
+                    >
+                        <BiUpArrow />
+                        <BiDownArrow />
+                    </div>
+                    <div className="enter-lift-container">
+                        <AiOutlineEnter
+                            className={`enter-lift-button ${
+                                activeArrows === 0 && currentStorey === 0
+                                    ? 'enter-lift-button-available'
+                                    : ' '
+                            }   ${inLift === true ? 'exit-lift' : ''}`}
+                            onClick={() => setInLift((prevState) => !prevState)}
+                        />
+                    </div>
+                </div>
+                <IoManOutline
+                    className={`you ${
+                        currentStorey !== 0 ? 'you-invisible' : ''
+                    } ${inLift === true ? 'you-invisible' : ''}`}
+                />
+                <div
+                    onClick={
+                        inLift === false
+                            ? () => setCurrentStorey(0)
+                            : () => setCurrentStorey(currentStorey)
+                    }
+                    className={`storey-door ${
+                        inLift === true ? 'storey-door-unavailable' : ' '
+                    }`}
+                >
+                    {currentStorey === 0 && inLift === false ? (
                         <BsDoorOpen className="door-open"></BsDoorOpen>
                     ) : (
                         <BsDoorClosed></BsDoorClosed>

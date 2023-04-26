@@ -6,19 +6,10 @@ export default function FloorIndex({ inLift, currentStorey }) {
             <div className="index-and-men-position index-first">
                 <IoManOutline
                     className={`you-invisible-lift ${
-                        inLift === true && currentStorey === 7 ? 'you-lift' : ''
-                    }`}
-                />
-                <p>7</p>
-            </div>
-            <div className="index-and-men-position">
-                <IoManOutline
-                    className={`you-invisible-lift ${
                         inLift === true && currentStorey === 6 ? 'you-lift' : ''
                     }`}
                 />
-
-                <p>6</p>
+                <p>7</p>
             </div>
             <div className="index-and-men-position">
                 <IoManOutline
@@ -27,7 +18,7 @@ export default function FloorIndex({ inLift, currentStorey }) {
                     }`}
                 />
 
-                <p>5</p>
+                <p>6</p>
             </div>
             <div className="index-and-men-position">
                 <IoManOutline
@@ -36,7 +27,7 @@ export default function FloorIndex({ inLift, currentStorey }) {
                     }`}
                 />
 
-                <p>4</p>
+                <p>5</p>
             </div>
             <div className="index-and-men-position">
                 <IoManOutline
@@ -45,7 +36,7 @@ export default function FloorIndex({ inLift, currentStorey }) {
                     }`}
                 />
 
-                <p>3</p>
+                <p>4</p>
             </div>
             <div className="index-and-men-position">
                 <IoManOutline
@@ -54,12 +45,21 @@ export default function FloorIndex({ inLift, currentStorey }) {
                     }`}
                 />
 
-                <p>2</p>
+                <p>3</p>
             </div>
             <div className="index-and-men-position">
                 <IoManOutline
                     className={`you-invisible-lift ${
                         inLift === true && currentStorey === 1 ? 'you-lift' : ''
+                    }`}
+                />
+
+                <p>2</p>
+            </div>
+            <div className="index-and-men-position">
+                <IoManOutline
+                    className={`you-invisible-lift ${
+                        inLift === true && currentStorey === 0 ? 'you-lift' : ''
                     }`}
                 />
 

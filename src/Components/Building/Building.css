@@ -22,6 +22,8 @@
     display: flex;
     flex-direction: column;
     padding: 0.5rem 0;
+    cursor: default;
+    user-select: none;
 }
 
 .index .index-and-men-position {
@@ -62,6 +64,8 @@
     display: flex;
     flex-direction: column;
     padding: 0.5rem 0;
+    cursor: default;
+    user-select: none;
 }
 
 .lift-and-floor-info-container .lift-and-floor-info-index {
@@ -76,10 +80,9 @@
 
 .lift-and-floor-info-container .lift-and-floor-info-index p {
     margin-left: 0.5rem;
-
     height: 100%;
     color: rgb(153, 153, 179);
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;

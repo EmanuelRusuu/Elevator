@@ -33,100 +33,100 @@ export default function Building({
     let liftAFloorSevenDirection;
     let liftBFloorSevenDirection;
 
-    if (elevatorAStorey === 1) {
+    if (elevatorAStorey === 0) {
         liftAFloorOneDirection = 'already here';
-    } else if (elevatorAStorey > 1) {
+    } else {
         liftAFloorOneDirection = 'down';
     }
 
-    if (elevatorBStorey === 1) {
+    if (elevatorBStorey === 0) {
         liftBFloorOneDirection = 'already here';
-    } else if (elevatorBStorey > 1) {
+    } else {
         liftBFloorOneDirection = 'down';
     }
 
-    if (elevatorAStorey === 2) {
+    if (elevatorAStorey === 1) {
         liftAFloorTwoDirection = 'already here';
-    } else if (elevatorAStorey > 2) {
+    } else if (elevatorAStorey > 1) {
         liftAFloorTwoDirection = 'down';
     } else {
         liftAFloorTwoDirection = 'up';
     }
 
-    if (elevatorBStorey === 2) {
+    if (elevatorBStorey === 1) {
         liftBFloorTwoDirection = 'already here';
-    } else if (elevatorBStorey > 2) {
+    } else if (elevatorBStorey > 1) {
         liftBFloorTwoDirection = 'down';
     } else {
         liftBFloorTwoDirection = 'up';
     }
-    if (elevatorAStorey === 3) {
+    if (elevatorAStorey === 2) {
         liftAFloorThreeDirection = 'already here';
-    } else if (elevatorAStorey > 3) {
+    } else if (elevatorAStorey > 2) {
         liftAFloorThreeDirection = 'down';
     } else {
         liftAFloorThreeDirection = 'up';
     }
 
-    if (elevatorBStorey === 3) {
+    if (elevatorBStorey === 2) {
         liftBFloorThreeDirection = 'already here';
-    } else if (elevatorBStorey > 3) {
+    } else if (elevatorBStorey > 2) {
         liftBFloorThreeDirection = 'down';
     } else {
         liftBFloorThreeDirection = 'up';
     }
-    if (elevatorAStorey === 4) {
+    if (elevatorAStorey === 3) {
         liftAFloorFourDirection = 'already here';
-    } else if (elevatorAStorey > 4) {
+    } else if (elevatorAStorey > 3) {
         liftAFloorFourDirection = 'down';
     } else {
         liftAFloorFourDirection = 'up';
     }
 
-    if (elevatorBStorey === 4) {
+    if (elevatorBStorey === 3) {
         liftBFloorFourDirection = 'already here';
-    } else if (elevatorBStorey > 4) {
+    } else if (elevatorBStorey > 3) {
         liftBFloorFourDirection = 'down';
     } else {
         liftBFloorFourDirection = 'up';
     }
-    if (elevatorAStorey === 5) {
+    if (elevatorAStorey === 4) {
         liftAFloorFiveDirection = 'already here';
-    } else if (elevatorAStorey > 5) {
+    } else if (elevatorAStorey > 4) {
         liftAFloorFiveDirection = 'down';
     } else {
         liftAFloorFiveDirection = 'up';
     }
 
-    if (elevatorBStorey === 5) {
+    if (elevatorBStorey === 4) {
         liftBFloorFiveDirection = 'already here';
-    } else if (elevatorBStorey > 5) {
+    } else if (elevatorBStorey > 4) {
         liftBFloorFiveDirection = 'down';
     } else {
         liftBFloorFiveDirection = 'up';
     }
-    if (elevatorAStorey === 6) {
+    if (elevatorAStorey === 5) {
         liftAFloorSixDirection = 'already here';
-    } else if (elevatorAStorey > 6) {
+    } else if (elevatorAStorey > 5) {
         liftAFloorSixDirection = 'down';
     } else {
         liftAFloorSixDirection = 'up';
     }
 
-    if (elevatorBStorey === 6) {
+    if (elevatorBStorey === 5) {
         liftBFloorSixDirection = 'already here';
-    } else if (elevatorBStorey > 6) {
+    } else if (elevatorBStorey > 5) {
         liftBFloorSixDirection = 'down';
     } else {
         liftBFloorSixDirection = 'up';
     }
-    if (elevatorAStorey === 7) {
+    if (elevatorAStorey === 6) {
         liftAFloorSevenDirection = 'already here';
     } else {
         liftAFloorSevenDirection = 'up';
     }
 
-    if (elevatorBStorey === 7) {
+    if (elevatorBStorey === 6) {
         liftBFloorSevenDirection = 'already here';
     } else {
         liftBFloorSevenDirection = 'up';
