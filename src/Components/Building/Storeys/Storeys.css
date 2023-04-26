@@ -1,12 +1,32 @@
 .buttons-container {
-    background-color: gray;
     height: 3rem;
-    width: 2rem;
+    width: 4rem;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.elevator-arrows {
+    width: 45%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    margin-left: 0.3rem;
+    background-color: gray;
+}
+
+.enter-lift-button {
+    font-size: 1.3rem;
+    color: gray;
+}
+
+.enter-lift-button-available {
+    color: black !important;
 }
 
 .storey {
@@ -33,7 +53,10 @@
 
 .elevator-arrow {
     cursor: pointer;
-    /* color: rgb(218, 126, 40); */
+}
+
+.active-arrow {
+    color: rgb(218, 126, 40);
 }
 
 .storey-door {

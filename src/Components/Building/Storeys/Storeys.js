@@ -1,6 +1,8 @@
+import { useEffect, useState } from 'react';
 import './Storeys.css';
 import { BiDownArrow, BiUpArrow } from 'react-icons/bi';
 import { BsDoorClosed, BsDoorOpen } from 'react-icons/bs';
+import { AiOutlineEnter } from 'react-icons/ai';
 
 export default function Storeys({
     currentStorey,
@@ -11,12 +13,25 @@ export default function Storeys({
     distanceElevatorB,
     setElevatorAStorey,
     setElevatorBStorey,
+    elevatorAStorey,
+    elevatorBStorey,
 }) {
+    const [activeArrows, setActiveArrows] = useState();
+
     if (callElevator === currentStorey) {
         setCallElevator(currentStorey);
     } else {
         setCallElevator();
     }
+
+    useEffect(() => {
+        if (callElevator !== null) {
+            callingElevator();
+        }
+        if (callElevator === currentStorey) {
+            setActiveArrows(currentStorey);
+        }
+    }, [callElevator, currentStorey]);
 
     function callingElevator() {
         if (
@@ -32,28 +47,42 @@ export default function Storeys({
         }
     }
 
-    console.log('call: ' + callElevator);
-    console.log('distange A: ' + distanceElevatorA);
-    console.log('distance B: ' + distanceElevatorB);
+    function handleArrowClick(currentStorey) {
+        setCallElevator(currentStorey);
+    }
 
     return (
         <div className="storeys-container">
             <div className="storey storey-seven">
                 <div className="buttons-container">
-                    <div className="buttons-container">
+                    <div className="elevator-arrows">
                         <BiUpArrow
                             onClick={() => {
-                                callingElevator();
+                                handleArrowClick(7);
+                                // setActiveArrows(7);
                             }}
-                            className="elevator-arrow"
-                        ></BiUpArrow>
+                            className={`elevator-arrow ${
+                                activeArrows === 7 ? 'active-arrow' : ' '
+                            }`}
+                        />
                         <BiDownArrow
                             onClick={() => {
-                                setCallElevator(7);
-                                callingElevator();
+                                handleArrowClick(7);
+                                // setActiveArrows(7);
                             }}
-                            className="elevator-arrow"
-                        ></BiDownArrow>
+                            className={`elevator-arrow ${
+                                activeArrows === 7 ? 'active-arrow' : ' '
+                            }`}
+                        />
+                    </div>
+                    <div className="enter-lift-container">
+                        <AiOutlineEnter
+                            className={`enter-lift-button ${
+                                activeArrows === 7
+                                    ? 'enter-lift-button-available'
+                                    : ' '
+                            }`}
+                        />
                     </div>
                 </div>
                 <div
@@ -69,21 +98,34 @@ export default function Storeys({
             </div>
             <div className="storey storey-six storey-odd">
                 <div className="buttons-container">
-                    <div className="buttons-container">
+                    <div className="elevator-arrows">
                         <BiUpArrow
                             onClick={() => {
-                                setCallElevator(6);
-                                callingElevator();
+                                handleArrowClick(6);
+                                // setActiveArrows(6);
                             }}
-                            className="elevator-arrow"
-                        ></BiUpArrow>
+                            className={`elevator-arrow ${
+                                activeArrows === 6 ? 'active-arrow' : ' '
+                            }`}
+                        />
                         <BiDownArrow
                             onClick={() => {
-                                setCallElevator(6);
-                                callingElevator();
+                                handleArrowClick(6);
+                                // setActiveArrows(6);
                             }}
-                            className="elevator-arrow"
-                        ></BiDownArrow>
+                            className={`elevator-arrow ${
+                                activeArrows === 6 ? 'active-arrow' : ' '
+                            }`}
+                        />
+                    </div>
+                    <div className="enter-lift-container">
+                        <AiOutlineEnter
+                            className={`enter-lift-button ${
+                                activeArrows === 6
+                                    ? 'enter-lift-button-available'
+                                    : ' '
+                            }`}
+                        />
                     </div>
                 </div>
                 <div
@@ -99,21 +141,34 @@ export default function Storeys({
             </div>
             <div className="storey storey-five">
                 <div className="buttons-container">
-                    <div className="buttons-container">
+                    <div className="elevator-arrows">
                         <BiUpArrow
                             onClick={() => {
-                                setCallElevator(5);
-                                callingElevator();
+                                handleArrowClick(5);
+                                // setActiveArrows(5);
                             }}
-                            className="elevator-arrow"
-                        ></BiUpArrow>
+                            className={`elevator-arrow ${
+                                activeArrows === 5 ? 'active-arrow' : ' '
+                            }`}
+                        />
                         <BiDownArrow
                             onClick={() => {
-                                setCallElevator(5);
-                                callingElevator();
+                                handleArrowClick(5);
+                                // setActiveArrows(5);
                             }}
-                            className="elevator-arrow"
-                        ></BiDownArrow>
+                            className={`elevator-arrow ${
+                                activeArrows === 5 ? 'active-arrow' : ' '
+                            }`}
+                        />
+                    </div>
+                    <div className="enter-lift-container">
+                        <AiOutlineEnter
+                            className={`enter-lift-button ${
+                                activeArrows === 5
+                                    ? 'enter-lift-button-available'
+                                    : ' '
+                            }`}
+                        />
                     </div>
                 </div>
                 <div
@@ -129,20 +184,35 @@ export default function Storeys({
             </div>
             <div className="storey storey-four storey-odd">
                 <div className="buttons-container">
-                    <BiUpArrow
-                        onClick={() => {
-                            setCallElevator(4);
-                            callingElevator();
-                        }}
-                        className="elevator-arrow"
-                    ></BiUpArrow>
-                    <BiDownArrow
-                        onClick={() => {
-                            setCallElevator(4);
-                            callingElevator();
-                        }}
-                        className="elevator-arrow"
-                    ></BiDownArrow>
+                    <div className="elevator-arrows">
+                        <BiUpArrow
+                            onClick={() => {
+                                handleArrowClick(4);
+                                // setActiveArrows(4);
+                            }}
+                            className={`elevator-arrow ${
+                                activeArrows === 4 ? 'active-arrow' : ' '
+                            }`}
+                        />
+                        <BiDownArrow
+                            onClick={() => {
+                                handleArrowClick(4);
+                                // setActiveArrows(4);
+                            }}
+                            className={`elevator-arrow ${
+                                activeArrows === 4 ? 'active-arrow' : ' '
+                            }`}
+                        />
+                    </div>
+                    <div className="enter-lift-container">
+                        <AiOutlineEnter
+                            className={`enter-lift-button ${
+                                activeArrows === 4
+                                    ? 'enter-lift-button-available'
+                                    : ' '
+                            }`}
+                        />
+                    </div>
                 </div>
                 <div
                     onClick={() => setCurrentStorey(4)}
@@ -157,21 +227,34 @@ export default function Storeys({
             </div>
             <div className="storey storey-three">
                 <div className="buttons-container">
-                    <div className="buttons-container">
+                    <div className="elevator-arrows">
                         <BiUpArrow
                             onClick={() => {
-                                setCallElevator(3);
-                                callingElevator();
+                                handleArrowClick(3);
+                                // setActiveArrows(3);
                             }}
-                            className="elevator-arrow"
-                        ></BiUpArrow>
+                            className={`elevator-arrow ${
+                                activeArrows === 3 ? 'active-arrow' : ' '
+                            }`}
+                        />
                         <BiDownArrow
                             onClick={() => {
-                                setCallElevator(3);
-                                callingElevator();
+                                handleArrowClick(3);
+                                // setActiveArrows(3);
                             }}
-                            className="elevator-arrow"
-                        ></BiDownArrow>
+                            className={`elevator-arrow ${
+                                activeArrows === 3 ? 'active-arrow' : ' '
+                            }`}
+                        />
+                    </div>
+                    <div className="enter-lift-container">
+                        <AiOutlineEnter
+                            className={`enter-lift-button ${
+                                activeArrows === 3
+                                    ? 'enter-lift-button-available'
+                                    : ' '
+                            }`}
+                        />
                     </div>
                 </div>
                 <div
@@ -187,21 +270,34 @@ export default function Storeys({
             </div>
             <div className="storey storey-two storey-odd">
                 <div className="buttons-container">
-                    <div className="buttons-container">
+                    <div className="elevator-arrows">
                         <BiUpArrow
                             onClick={() => {
-                                setCallElevator(2);
-                                callingElevator();
+                                handleArrowClick(2);
+                                // setActiveArrows(2);
                             }}
-                            className="elevator-arrow"
-                        ></BiUpArrow>
+                            className={`elevator-arrow ${
+                                activeArrows === 2 ? 'active-arrow' : ' '
+                            }`}
+                        />
                         <BiDownArrow
                             onClick={() => {
-                                setCallElevator(2);
-                                callingElevator();
+                                handleArrowClick(2);
+                                // setActiveArrows(2);
                             }}
-                            className="elevator-arrow"
-                        ></BiDownArrow>
+                            className={`elevator-arrow ${
+                                activeArrows === 2 ? 'active-arrow' : ' '
+                            }`}
+                        />
+                    </div>
+                    <div className="enter-lift-container">
+                        <AiOutlineEnter
+                            className={`enter-lift-button ${
+                                activeArrows === 2
+                                    ? 'enter-lift-button-available'
+                                    : ' '
+                            }`}
+                        />
                     </div>
                 </div>
                 <div
@@ -217,21 +313,34 @@ export default function Storeys({
             </div>
             <div className="storey storey-one">
                 <div className="buttons-container">
-                    <div className="buttons-container">
+                    <div className="elevator-arrows">
                         <BiUpArrow
                             onClick={() => {
-                                setCallElevator(1);
-                                callingElevator();
+                                handleArrowClick(1);
+                                // setActiveArrows(1);
                             }}
-                            className="elevator-arrow"
-                        ></BiUpArrow>
+                            className={`elevator-arrow ${
+                                activeArrows === 1 ? 'active-arrow' : ' '
+                            }`}
+                        />
                         <BiDownArrow
                             onClick={() => {
-                                setCallElevator(1);
-                                callingElevator();
+                                handleArrowClick(1);
+                                // setActiveArrows(1);
                             }}
-                            className="elevator-arrow"
-                        ></BiDownArrow>
+                            className={`elevator-arrow ${
+                                activeArrows === 1 ? 'active-arrow' : ' '
+                            }`}
+                        />
+                    </div>
+                    <div className="enter-lift-container">
+                        <AiOutlineEnter
+                            className={`enter-lift-button ${
+                                activeArrows === 1
+                                    ? 'enter-lift-button-available'
+                                    : ' '
+                            }`}
+                        />
                     </div>
                 </div>
                 <div

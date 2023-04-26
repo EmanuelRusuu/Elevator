@@ -6,7 +6,7 @@ function App() {
     const [elevatorAStorey, setElevatorAStorey] = useState(1);
     const [elevatorBStorey, setElevatorBStorey] = useState(7);
     const [currentStorey, setCurrentStorey] = useState(4);
-    const [callElevator, setCallElevator] = useState();
+    let [callElevator, setCallElevator] = useState();
     const [inLift, setInLift] = useState(false);
 
     let distanceElevatorA;
@@ -33,6 +33,7 @@ function App() {
     if (callElevator === currentStorey) {
         elevatorIsCalled = currentStorey;
     } else {
+        callElevator = null;
         elevatorIsCalled = 'Call the elevator on your floor!';
     }
 
@@ -52,8 +53,8 @@ function App() {
                     <p>{`Lift A is at floor: ${elevatorAStorey}`}</p>
                     <p>{`Lift B is at floor: ${elevatorBStorey}`}</p>
                     <br></br>
-                    <p>{`Lift A is ${distanceElevatorA}`}</p>
-                    <p>{`Lift B is ${distanceElevatorB}`}</p>
+                    <p>{`Lift A is ${distanceElevatorA} floors away`}</p>
+                    <p>{`Lift B is ${distanceElevatorB} floors away`}</p>
                 </div>
                 <Building
                     elevatorAStorey={elevatorAStorey}

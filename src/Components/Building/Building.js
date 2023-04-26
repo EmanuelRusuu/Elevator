@@ -20,11 +20,11 @@ export default function Building({
             <LiftA
                 elevatorAStorey={elevatorAStorey}
                 setElevatorAStorey={setElevatorAStorey}
-            ></LiftA>
+            />
             <LiftB
                 elevatorBStorey={elevatorBStorey}
                 setElevatorBStorey={setElevatorBStorey}
-            ></LiftB>
+            />
             <Storeys
                 currentStorey={currentStorey}
                 setCurrentStorey={setCurrentStorey}
@@ -34,7 +34,9 @@ export default function Building({
                 distanceElevatorB={distanceElevatorB}
                 setElevatorAStorey={setElevatorAStorey}
                 setElevatorBStorey={setElevatorBStorey}
-            ></Storeys>
+                elevatorAStorey={elevatorAStorey}
+                elevatorBStorey={elevatorBStorey}
+            />
         </div>
     );
 }

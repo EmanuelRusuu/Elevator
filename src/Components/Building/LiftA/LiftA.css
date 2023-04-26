@@ -62,7 +62,7 @@
 .segment-a,
 .segment-d,
 .segment-g {
-    background-color: rgb(105, 42, 42);
+    background-color: rgba(105, 42, 42, 0.5);
     width: 75%;
     height: 5%;
 }
@@ -70,9 +70,9 @@
 .segment-c,
 .segment-e,
 .segment-f {
-    background-color: rgb(105, 42, 42);
+    background-color: rgba(105, 42, 42, 0.5);
     width: 10%;
-    height: 75%;
+    height: 78%;
 }
 
 .row1 {

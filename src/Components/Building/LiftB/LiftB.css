@@ -1,7 +1,7 @@
-.segment-a-b,
+/* .segment-a-b,
 .segment-d-b,
 .segment-g-b {
-    background-color: rgb(105, 42, 42);
+    background-color: rgba(105, 42, 42, 0.4) !important;
     width: 75%;
     height: 5%;
 }
@@ -9,7 +9,7 @@
 .segment-c-b,
 .segment-e-b,
 .segment-f-b {
-    background-color: rgb(105, 42, 42);
+    background-color: rgba(105, 42, 42, 0.4) !important;
     width: 10%;
     height: 75%;
-}
+} */
