@@ -7,7 +7,7 @@ function App() {
     const [elevatorBStorey, setElevatorBStorey] = useState(7);
     const [currentStorey, setCurrentStorey] = useState(4);
     let [callElevator, setCallElevator] = useState();
-    const [inLift, setInLift] = useState(false);
+    // const [inLift, setInLift] = useState(false);
 
     let distanceElevatorA;
     let distanceElevatorB;

@@ -34,8 +34,6 @@ export default function Building({
                 distanceElevatorB={distanceElevatorB}
                 setElevatorAStorey={setElevatorAStorey}
                 setElevatorBStorey={setElevatorBStorey}
-                elevatorAStorey={elevatorAStorey}
-                elevatorBStorey={elevatorBStorey}
             />
         </div>
     );

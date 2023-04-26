@@ -13,8 +13,6 @@ export default function Storeys({
     distanceElevatorB,
     setElevatorAStorey,
     setElevatorBStorey,
-    elevatorAStorey,
-    elevatorBStorey,
 }) {
     const [activeArrows, setActiveArrows] = useState();
 
