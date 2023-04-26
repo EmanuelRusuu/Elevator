@@ -12,7 +12,7 @@ export default function AppInfo({
     return (
         <div className="app-information">
             <p>{`You are at floor: ${currentStorey + 1}${isInsideLift}`}</p>
-            <p>{`Elevator called at floor: ${elevatorIsCalled + 1}`}</p>
+            <p>{`Elevator called at floor: ${elevatorIsCalled}`}</p>
             <p>{isLiftHere}</p>
             <br></br>
             <p>{`Lift A is at floor: ${elevatorAStorey}`}</p>

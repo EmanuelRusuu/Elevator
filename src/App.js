@@ -34,9 +34,9 @@ function App() {
     let elevatorIsCalled;
 
     if (callElevator === currentStorey) {
-        elevatorIsCalled = currentStorey;
+        elevatorIsCalled = currentStorey + 1;
     } else {
-        callElevator = 0;
+        callElevator = null;
         elevatorIsCalled = 'Call the elevator on your floor!';
     }
 
